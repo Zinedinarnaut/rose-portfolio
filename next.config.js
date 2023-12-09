@@ -1,21 +1,8 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  module: {
-    rules: [
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/', // or the desired output path
-          },
-        },
-      },
-      // Add other loaders for different file types if needed
-    ],
-  },
+
   images: {
     remotePatterns: [
       {
@@ -24,6 +11,24 @@ const nextConfig = {
       },
     ],
   },
-}
 
-module.exports = nextConfig
+  webpack: (config, { isServer }) => {
+    // Add a rule for font files
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'static/fonts/', // or the desired output path
+        },
+      },
+    });
+
+    // Add other rules or configurations if needed
+
+    return config;
+  },
+};
+
+module.exports = nextConfig;

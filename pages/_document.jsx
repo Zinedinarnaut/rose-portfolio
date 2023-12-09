@@ -4,8 +4,8 @@ import Script from "next/script";
 export default function Document() {
   const headdata = [
     {
-      url: "https://araxyso.xyz",
-      title: "Araxyso",
+      url: "https://rose-portfolio-six.vercel.app",
+      title: "Ayl Rose",
     },
   ];
   return (
@@ -24,7 +24,7 @@ export default function Document() {
           rel="shortcut icon"
           href="/araxyso2.png"
         />
-        <meta name="author" content="Araxyso" />
+        <meta name="author" content="Aly Rose" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={headdata.url} />
         <meta property="og:title" content={headdata.title} />

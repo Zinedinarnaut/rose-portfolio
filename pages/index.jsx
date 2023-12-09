@@ -114,7 +114,6 @@ export default function HomePage() {
                             <h1 className="font-extrabold text-2xl md:text-5xl tracking-tight text-white pr-4" style={{ textDecoration: "underline" }}>
                                 {loading ? <Skeleton width={200} /> : "Ayl Rose"}
                             </h1>
-                            <br />
                             <h2
                                 className="text-gray-700 dark:text-gray-200 mb-1 relative"
                                 style={{ position: "relative" }}
@@ -147,14 +146,14 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-                <div className="relative md:top-[50%] top-[50vh] right-[-72vh] mb-0 mr-45 flex space-x-4">
+{/*                <div className="relative md:top-[50%] top-[50vh] right-[-72vh] mb-0 mr-45 flex space-x-4">
                     <button onClick={switchToImage} style={{ zIndex: 20 }} className={`transition-all border-2 p-2 rounded-full focus:outline-none ${mode === 'image' ? 'bg-transparent text-white' : 'bg-gray-300 text-gray-800'}`}>
                         📸
                     </button>
                     <button onClick={switchToVideo} className={`transition-all p-2 border-2 rounded-full focus:outline-none ${mode === 'video' ? 'bg-transparent text-white' : 'bg-gray-300 text-gray-800'}`}>
                         🎥
                     </button>
-                </div>
+                </div>*/}
                 <div className="mt-5 md:mt-[-0vh]">
                     {loading ? (
                         <>
